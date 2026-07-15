@@ -1,25 +1,37 @@
 # DCSP Stabilization Loop
 
-C와 NI-DAQmx를 이용한 짐벌 안정화 루프 실험 코드입니다.
+This repository contains C-based control code for a gimbal stabilization loop experiment utilizing NI-DAQmx.  
+The program handles real-time data acquisition, sensor signal processing, applies control algorithms (PD/PI) along with a Low-Pass Filter (LPF), and logs the experimental data.
 
-## 파일 구성
+## 🎬 Experimental Video
+Click the image below to watch the gimbal stabilization loop demonstration on YouTube Shorts.
 
-- `main.c`: 프로그램 초기화, 제어 루프 실행, 데이터 기록 및 종료
-- `mygimbal_runexp.c`: DAQ 입출력, 센서 처리, 제어기, 데이터 저장
-- `mygimbal_runexp.h`: 공통 상수와 함수 선언
-- `mygimbal_stabilization.c`: 안정화 실험 입력과 실험 정보
-- `mygimbal_stabilization.h`: 샘플링, 실험 시간, 출력 파일 설정
+### Demo Video
+| Stabilization Test |
+| :---: |
+| <a href="https://youtube.com/shorts/oQwa-0CZZsY"><img src="https://img.youtube.com/vi/oQwa-0CZZsY/0.jpg" width="300"></a> |
+| Stabilization Loop Demo |
 
-## 주요 설정
+---
 
-- Sampling frequency: 200 Hz
-- Gyro LPF cutoff frequency: 10 Hz
-- Designation controller: PD
-- Stabilization controller: PI
-- Emergency stop key: `f`
-- Output file: `Stabilization_Loop.txt`
+## File Structure
 
-## DAQ 채널
+- `main.c`: Program initialization, control loop execution, data logging, and termination sequence.
+- `mygimbal_runexp.c`: DAQ I/O operations, sensor processing, control algorithms, and data saving.
+- `mygimbal_runexp.h`: Shared constants and function declarations.
+- `mygimbal_stabilization.c`: Stabilization experiment input logic and experimental information.
+- `mygimbal_stabilization.h`: Configurations for sampling frequency, trial duration, and output file.
+
+## Key Specifications & Settings
+
+- **Sampling Frequency:** 200 Hz
+- **Gyro LPF Cutoff Frequency:** 10 Hz
+- **Designation Controller Type:** PD Controller
+- **Stabilization Controller Type:** PI Controller
+- **Emergency Stop Key:** `f`
+- **Output File:** `Stabilization_Loop.txt`
+
+## DAQ Channel Configuration
 
 - `Dev4/ai0`: Disturbance input
 - `Dev4/ai2`: Gyro voltage
@@ -27,14 +39,16 @@ C와 NI-DAQmx를 이용한 짐벌 안정화 루프 실험 코드입니다.
 - `Dev4/ao0`: Switch command
 - `Dev4/ao1`: Motor command
 
-## 실행 환경
+## System Requirements & Environment
 
-- Windows
-- Visual Studio
-- NI-DAQmx driver and C development support
-- NI DAQ device configured as `Dev4`
+This project is configured and tested under the following environment:
 
-## 주의사항
+- **OS:** Windows
+- **IDE:** Visual Studio
+- **Driver:** NI-DAQmx driver with C development support
+- **Device Name:** NI DAQ device configured as `Dev4` in NI MAX
 
-실제 장비의 채널 설정과 코드의 DAQ 채널 설정이 일치하는지 확인한 뒤 실행해야 합니다.
-생성되는 실험 결과 파일은 `.gitignore`에서 기본적으로 제외됩니다.
+## Pre-execution Checklists & Notes
+
+- **Channel Verification:** Always verify that the physical wiring and hardware channel settings match the DAQ configurations specified in the code before running the experiment.
+- **Git Target:** The generated experimental text files (`*.txt`) are untracked and automatically ignored by `.gitignore` by default.
