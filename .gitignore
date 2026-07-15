@@ -1,0 +1,24 @@
+# Visual Studio
+.vs/
+Debug/
+Release/
+x64/
+x86/
+*.obj
+*.pdb
+*.ilk
+*.exe
+*.user
+*.suo
+*.VC.db
+*.VC.opendb
+
+# Generated experiment data
+Stabilization_Loop.txt
+
+# Temporary files
+*.tmp
+*.bak
+*~
+Thumbs.db
+Desktop.ini
