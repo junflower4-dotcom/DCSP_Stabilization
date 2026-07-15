@@ -1,10 +1,10 @@
 /*----------------------------------------------------------------\
-@ DCSP
+@ HGU_MCE_DCSP
 
-Title            : gimbal_6_StabilizationLoop
+Title            : gimbal_StabilizationLoop
 Author           : Yejun_Lee
 Created          : 10-06-2026
-Modified         : 10-06-2026
+Modified         : 15-07-2026
 
 ----------------------------------------------------------------*/
 
