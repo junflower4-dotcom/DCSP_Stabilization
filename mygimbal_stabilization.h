@@ -1,11 +1,11 @@
 
 /*----------------------------------------------------------------\
-@ DCSP
+@ HGU_MCE_DCSP
 
 Title			 : mygimbal_designation_stepinput.h
 Author           : Yejun_Lee
 Created          : 06-06-2026
-Modified         : 06-06-2026
+Modified         : 15-07-2026
 
 Description		 : step input
 ----------------------------------------------------------------*/
