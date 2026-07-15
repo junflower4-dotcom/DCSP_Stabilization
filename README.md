@@ -1,4 +1,4 @@
-# DCSP Stabilization Loop
+# Gimbal Stabilization Loop
 
 This repository contains C-based control code for a gimbal stabilization loop experiment utilizing NI-DAQmx.  
 The program handles real-time data acquisition, sensor signal processing, applies control algorithms (PD/PI) along with a Low-Pass Filter (LPF), and logs the experimental data.
